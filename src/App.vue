@@ -1,5 +1,6 @@
 <script setup>
 import IdCard from './components/IdCard.vue'
+import Random from './components/Random.vue'
 </script>
 
 <template>
@@ -23,6 +24,11 @@ import IdCard from './components/IdCard.vue'
   :birth='new Date("1988-05-11")'
   picture="https://randomuser.me/api/portraits/women/44.jpg"
 />
+</div>
+  <h1>2- Random number</h1>
+<div>
+  <Random :min="1" :max="6" />
+  <Random :min="1" :max="100" />
 </div>
 </template>
 

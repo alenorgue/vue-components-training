@@ -24,7 +24,7 @@ const formattedBirth = computed(() => props.birth.toDateString());
           <p> <strong> First name: </strong>{{ firstName }} </p>
           <p> <strong> Last name: </strong>{{ lastName }} </p>
           <p> <strong> Gender: </strong> {{ gender }}</p>
-          <p> <strong> Height: </strong> {{ height }}</p>
+          <p> <strong> Height: </strong> {{ height/100 }} m</p>
           <p> <strong> Birth: </strong> {{ formattedBirth }}</p>
         </div>
       </div>
@@ -37,7 +37,7 @@ const formattedBirth = computed(() => props.birth.toDateString());
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
    padding: 1rem;
    margin: 1rem;
-  border: solid black 1px;
+  border: solid 1px;
  }
  .id-card-img {
    width: 150px;
