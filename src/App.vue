@@ -5,6 +5,7 @@ import BoxColor from './components/BoxColor.vue'
 import CreditCard from './components/CreditCard.vue'
 import Rating from './components/Rating.vue'
 import DriverCard from './components/DriverCard.vue'
+import LikeButton from './components/LikeButton.vue'
 </script>
 
 <template>
@@ -97,6 +98,11 @@ import DriverCard from './components/DriverCard.vue'
       img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
       :car="{ model: 'Audi A3', licensePlate: 'BE33ER' }"
     />
+</div>
+<h1> 7- Like Button</h1>
+<div>
+  <LikeButton />
+  <LikeButton />
 </div>
 </template>
 
