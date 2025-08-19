@@ -4,6 +4,7 @@ import Random from './components/Random.vue'
 import BoxColor from './components/BoxColor.vue'
 import CreditCard from './components/CreditCard.vue'
 import Rating from './components/Rating.vue'
+import DriverCard from './components/DriverCard.vue'
 </script>
 
 <template>
@@ -81,6 +82,21 @@ import Rating from './components/Rating.vue'
     <Rating :rate="3" />
     <Rating :rate="4" />
     <Rating :rate="5" />
+</div>
+<h1> 6- Driver Card</h1>
+<div>
+  <DriverCard
+      name="Travis Kalanick"
+      :rating="4.2"
+      img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+      :car="{ model: 'Toyota Corolla Altis', licensePlate: 'CO42DE' }"
+    />
+    <DriverCard
+      name="Dara Khosrowshahi"
+      :rating="4.9"
+      img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+      :car="{ model: 'Audi A3', licensePlate: 'BE33ER' }"
+    />
 </div>
 </template>
 
