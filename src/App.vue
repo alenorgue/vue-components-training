@@ -9,6 +9,7 @@ import LikeButton from './components/LikeButton.vue'
 import ClickablePicture from './components/ClickablePicture.vue'
 import Dice from './components/Dice.vue'
 import Carousel from './components/Carousel.vue'
+import NumbersTable from './components/NumbersTable.vue'
 </script>
 
 <template>
@@ -125,6 +126,10 @@ import Carousel from './components/Carousel.vue'
     'https://randomuser.me/api/portraits/men/2.jpg'
   ]"
 />
+</div>
+<h1>11- Numbers Table</h1>
+<div>
+<NumbersTable :limit="50" />
 </div>
 </template>
 
