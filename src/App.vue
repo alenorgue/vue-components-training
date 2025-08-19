@@ -10,6 +10,7 @@ import ClickablePicture from './components/ClickablePicture.vue'
 import Dice from './components/Dice.vue'
 import Carousel from './components/Carousel.vue'
 import NumbersTable from './components/NumbersTable.vue'
+import FaceBook from './components/FaceBook.vue'
 </script>
 
 <template>
@@ -130,6 +131,10 @@ import NumbersTable from './components/NumbersTable.vue'
 <h1>11- Numbers Table</h1>
 <div>
 <NumbersTable :limit="50" />
+</div>
+<h1> 12- FaceBook</h1>
+<div>
+<FaceBook />
 </div>
 </template>
 
