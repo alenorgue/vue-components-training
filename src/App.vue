@@ -6,6 +6,9 @@ import CreditCard from './components/CreditCard.vue'
 import Rating from './components/Rating.vue'
 import DriverCard from './components/DriverCard.vue'
 import LikeButton from './components/LikeButton.vue'
+import ClickablePicture from './components/ClickablePicture.vue'
+import Dice from './components/Dice.vue'
+import Carousel from './components/Carousel.vue'
 </script>
 
 <template>
@@ -103,6 +106,25 @@ import LikeButton from './components/LikeButton.vue'
 <div>
   <LikeButton />
   <LikeButton />
+</div>
+<h1> 8- Clickable Picture</h1>
+<div>
+  <ClickablePicture img="maxence.png" img-clicked="maxence-glasses.png" />
+</div>
+<h1> 9- Dice</h1>
+<div>
+  <Dice />
+</div>
+<h1>10- Carousel</h1>
+<div>
+<Carousel
+  :images="[
+    'https://randomuser.me/api/portraits/women/1.jpg',
+    'https://randomuser.me/api/portraits/men/1.jpg',
+    'https://randomuser.me/api/portraits/women/2.jpg',
+    'https://randomuser.me/api/portraits/men/2.jpg'
+  ]"
+/>
 </div>
 </template>
 
