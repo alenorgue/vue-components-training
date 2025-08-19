@@ -6,20 +6,15 @@ const props = defineProps({
     rate: Number
 })
 
-const fillStarts = computed(() => {
-    return Math.round(props.rate)
-})
-
-const emptyStarts = computed(() => {
-    return Math.round(5 - props.rate)
-})
+const fillStars = computed(() => Math.round(props.rate));
+const emptyStars = computed(() => 5 - fillStars.value);
 
 </script>
 
 <template>
     <div>
-        <span class="filled" v-for="r in fillStarts">★</span>
-        <span class="empty"  v-for="r in emptyStarts">☆</span>
+    <span class="filled" v-for="r in fillStars">★</span>
+    <span class="empty"  v-for="r in emptyStars">☆</span>
     </div>
 </template>
 

@@ -1,6 +1,9 @@
 <script setup>
 import IdCard from './components/IdCard.vue'
 import Random from './components/Random.vue'
+import BoxColor from './components/BoxColor.vue'
+import CreditCard from './components/CreditCard.vue'
+import Rating from './components/Rating.vue'
 </script>
 
 <template>
@@ -30,8 +33,67 @@ import Random from './components/Random.vue'
   <Random :min="1" :max="6" />
   <Random :min="1" :max="100" />
 </div>
+<h1> 3- BoxColor</h1>
+<div>
+  <BoxColor :r="255" :g="0" :b="0" />
+  <BoxColor :r="128" :g="255" :b="0" />
+
+</div>
+<h1> 4- Credit Card</h1>
+<div class="creditcard-container">
+    <CreditCard
+      type="Visa"
+      number="0123456789018845"
+      :expiration-month="3"
+      :expiration-year="2021"
+      bank="BNP"
+      owner="Maxence Bouret"
+      bg-color="#11aa99"
+      color="white"
+    />
+       <CreditCard
+      type="Master Card"
+      number="0123456789010995"
+      :expiration-month="3"
+      :expiration-year="2021"
+      bank="N26"
+      owner="Maxence Bouret"
+      bg-color="#eeeeee"
+      color="#222222"
+    />
+
+    <CreditCard
+      type="Visa"
+      number="0123456789016984"
+      :expiration-month="12"
+      :expiration-year="2019"
+      bank="Name of the Bank"
+      owner="Firstname Lastname"
+      bg-color="#ddbb55"
+      color="white"
+    />
+</div>
+<h1> 5- Rating</h1>
+<div>
+    <Rating :rate="0" />
+    <Rating :rate="1.49" />
+    <Rating :rate="1.5" />
+    <Rating :rate="3" />
+    <Rating :rate="4" />
+    <Rating :rate="5" />
+</div>
 </template>
 
 <style scoped>
 h2 {margin: 1rem 0;}
+ .creditcard-container {
+  border: solid white 2px;
+  margin: 1rem;
+    padding: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
 </style>
+ 
