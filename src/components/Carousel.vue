@@ -9,7 +9,7 @@ const props = defineProps({
   },
 });
 
-const currentIndex = ref(0);
+const currentIndex = ref(2);
 
 function next() {
   currentIndex.value = (currentIndex.value + 1) % props.images.length;
