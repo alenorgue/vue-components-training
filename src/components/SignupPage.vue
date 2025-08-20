@@ -48,11 +48,11 @@ const greeting = computed(() => {
         <option value="fr">French</option>
         <option value="de">German</option>
 </select>
-<button @click="handleClick">Log in</button>
+<button @click="handleClick">Sign Up</button>
 <div v-if="showMessage && emailValid && passwordValid">
     <p>{{ greeting }}</p>
     <p>Your email address is: {{ email }}</p>
-    <p>Your password is: Correct </p>
+    <p>Your password is: Valid </p>
 </div>
 </div>
 </template>
