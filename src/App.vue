@@ -136,6 +136,8 @@ import FaceBook from './components/FaceBook.vue'
 <div>
 <FaceBook />
 </div>
+<h1>14- Sign up Page</h1>
+
 </template>
 
 <style scoped>

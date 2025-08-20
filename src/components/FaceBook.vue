@@ -2,10 +2,54 @@
 import profiles from "../data/berlin.json";
 import { computed, ref } from 'vue';
 
+const selectedCountry = ref(null)
+const searchText = ref('');
+
+// Computed para extraer países únicos
+const uniqueCountries = computed(() => {
+  return [...new Set(profiles.map(p => p.country))]
+})
+
+// Computed para filtrar usuarios
+const filteredProfiles = computed(() => {
+  let filtered = profiles;
+  if (selectedCountry.value) {
+    filtered = filtered.filter(p => p.country === selectedCountry.value);
+  }
+  if (searchText.value.trim()) {
+    const text = searchText.value.toLowerCase();
+    filtered = filtered.filter(profile =>
+      Object.values(profile).some(val =>
+        String(val).toLowerCase().includes(text)
+      )
+    );
+  }
+  return filtered;
+});
 </script>
 
 <template>
- <div v-for="(profile, index) in profiles" :key="index" class="id-card-container">
+<div>
+  <button
+    @click="selectedCountry = null"
+    :class="{ selected: !selectedCountry }"
+    class="filter-btn">
+    Mostrar todos
+  </button>
+  <button
+    v-for="country in uniqueCountries"
+    :key="country"
+    @click="selectedCountry = country"
+    :class="{ selected: selectedCountry === country }"
+    class="filter-btn"
+  >
+    {{ country }}
+  </button>
+</div>
+
+<input v-model="searchText" placeholder="Search" />
+
+ <div v-for="(profile, index) in filteredProfiles" :key="index" class="id-card-container">
         <img :src="profile.img" alt="Profile picture" class="id-card-img" />
         <div class="id-card-details">
           <p> <strong> First name: </strong>{{ profile.firstName }} </p>
@@ -37,4 +81,19 @@ import { computed, ref } from 'vue';
    flex: 1;
  }
 
+ .filter-btn {
+   margin: 0.25rem;
+   padding: 0.5rem 1rem;
+   border: 1px solid #bbb;
+   background: #f5f5f5;
+   cursor: pointer;
+   border-radius: 4px;
+   font-size: 1rem;
+   transition: background 0.2s, border 0.2s;
+ }
+ .filter-btn.selected {
+   background: #bde0fe;
+   border-color: #2196f3;
+   font-weight: bold;
+ }
 </style>
