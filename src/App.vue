@@ -11,6 +11,7 @@ import Dice from './components/Dice.vue'
 import Carousel from './components/Carousel.vue'
 import NumbersTable from './components/NumbersTable.vue'
 import FaceBook from './components/FaceBook.vue'
+import SignupPage from './components/SignupPage.vue'
 </script>
 
 <template>
@@ -137,7 +138,7 @@ import FaceBook from './components/FaceBook.vue'
 <FaceBook />
 </div>
 <h1>14- Sign up Page</h1>
-
+<SignupPage />
 </template>
 
 <style scoped>
