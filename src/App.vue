@@ -12,9 +12,13 @@ import Carousel from './components/Carousel.vue'
 import NumbersTable from './components/NumbersTable.vue'
 import FaceBook from './components/FaceBook.vue'
 import SignupPage from './components/SignupPage.vue'
+import SingleColorPicker from './components/SingleColorPicker.vue'
+import RGBColorPicker from './components/RGBColorPicker.vue'
 </script>
 
 <template>
+<RGBColorPicker />
+
   <h1>Creación de componentes con Vue</h1>
   <p>Crea a conitnuación todos los componentes del ejercicio.</p>
       <h1>1- ID Cards</h1>
