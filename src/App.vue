@@ -17,9 +17,7 @@ import RGBColorPicker from './components/RGBColorPicker.vue'
 </script>
 
 <template>
-<RGBColorPicker />
-
-  <h1>Creación de componentes con Vue</h1>
+<h1>Creación de componentes con Vue</h1>
   <p>Crea a conitnuación todos los componentes del ejercicio.</p>
       <h1>1- ID Cards</h1>
 <div>
@@ -143,6 +141,9 @@ import RGBColorPicker from './components/RGBColorPicker.vue'
 </div>
 <h1>14- Sign up Page</h1>
 <SignupPage />
+<h1>15- RGB Color Picker</h1>
+
+<RGBColorPicker />
 </template>
 
 <style scoped>
